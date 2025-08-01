@@ -3,32 +3,34 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { Scale, FileText, BarChart3, Home } from "lucide-react"
+import { Scale } from "lucide-react"
+import { MobileNavigation } from "./mobile-navigation"
 
 const navigationItems = [
   {
     name: "Главная",
     href: "/",
-    icon: Home,
     description: "Хронология системных нарушений",
   },
   {
     name: "Правовой анализ",
     href: "/legal-analysis",
-    icon: Scale,
     description: "Юридическая экспертиза с прецедентами",
   },
   {
     name: "База документов",
     href: "/documents",
-    icon: FileText,
     description: "Неопровержимые доказательства",
   },
   {
     name: "Статистика",
     href: "/statistics",
-    icon: BarChart3,
     description: "Количественные доказательства",
+  },
+  {
+    name: "Временная шкала",
+    href: "/timeline",
+    description: "Детальная хронология событий",
   },
 ]
 
@@ -36,17 +38,21 @@ export function Navigation() {
   const pathname = usePathname()
 
   return (
-    <nav className="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
+    <nav className="bg-slate-800 border-b border-gray-700 sticky top-0 z-50 shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2 text-white font-bold text-xl">
+          {/* Логотип */}
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-white font-bold text-xl hover:text-red-400 transition-colors"
+          >
             <Scale className="h-6 w-6 text-red-400" />
             Дело против КГД
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Десктопная навигация */}
+          <div className="hidden md:flex items-center space-x-1">
             {navigationItems.map((item) => {
-              const Icon = item.icon
               const isActive = pathname === item.href
 
               return (
@@ -54,26 +60,25 @@ export function Navigation() {
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    "flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors",
-                    isActive ? "bg-red-600 text-white" : "text-gray-300 hover:text-white hover:bg-gray-800",
+                    "px-4 py-2 rounded-md text-sm font-medium transition-colors relative group",
+                    isActive ? "bg-red-600 text-white" : "text-gray-300 hover:text-white hover:bg-gray-700",
                   )}
                   title={item.description}
                 >
-                  <Icon className="h-4 w-4" />
                   {item.name}
+
+                  {/* Tooltip */}
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
+                    {item.description}
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
+                  </div>
                 </Link>
               )
             })}
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button className="text-gray-300 hover:text-white">
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
+          {/* Мобильная навигация */}
+          <MobileNavigation />
         </div>
       </div>
     </nav>

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детальная временная шкала | ТОО "Администратор сети" vs КГД МФ РК</title>
+    <meta name="description" content="Подробная хронология системных нарушений КГД МФ РК с февраля 2022 года">
+    <meta name="keywords" content="временная шкала, хронология нарушений, КГД, УГД, судебное дело">
+    
+    <!-- Стили -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    
+    <!-- Иконки -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" onerror="console.warn('Не удалось загрузить Lucide иконки')"></script>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <i data-lucide="scale" class="icon"></i>
+                    Дело против КГД
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">
+                        <i data-lucide="home" class="icon"></i>
+                        Главная
+                    </a></li>
+                    <li><a href="legal-analysis.html" class="nav-link">
+                        <i data-lucide="scale" class="icon"></i>
+                        Правовой анализ
+                    </a></li>
+                    <li><a href="documents.html" class="nav-link">
+                        <i data-lucide="file-text" class="icon"></i>
+                        База документов
+                    </a></li>
+                    <li><a href="statistics.html" class="nav-link">
+                        <i data-lucide="bar-chart-3" class="icon"></i>
+                        Статистика
+                    </a></li>
+                    <li><a href="timeline.html" class="nav-link active">
+                        <i data-lucide="clock" class="icon"></i>
+                        Временная шкала
+                    </a></li>
+                </ul>
+
+                <!-- Мобильное меню -->
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i data-lucide="menu" class="icon"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="mobile-menu-logo">
+                <i data-lucide="scale" class="icon"></i>
+                Дело против КГД
+            </div>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i data-lucide="x" class="icon"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <a href="index.html" class="mobile-menu-link">
+                <i data-lucide="home" class="icon"></i>
+                <div>
+                    <div class="mobile-menu-link-title">Главная</div>
+                    <div class="mobile-menu-link-desc">Хронология системных нарушений</div>
+                </div>
+            </a>
+            <a href="legal-analysis.html" class="mobile-menu-link">
+                <i data-lucide="scale" class="icon"></i>
+                <div>
+                    <div class="mobile-menu-link-title">Правовой анализ</div>
+                    <div class="mobile-menu-link-desc">Юридическая экспертиза с прецедентами</div>
+                </div>
+            </a>
+            <a href="documents.html" class="mobile-menu-link">
+                <i data-lucide="file-text" class="icon"></i>
+                <div>
+                    <div class="mobile-menu-link-title">База документов</div>
+                    <div class="mobile-menu-link-desc">Неопровержимые доказательства</div>
+                </div>
+            </a>
+            <a href="statistics.html" class="mobile-menu-link">
+                <i data-lucide="bar-chart-3" class="icon"></i>
+                <div>
+                    <div class="mobile-menu-link-title">Статистика</div>
+                    <div class="mobile-menu-link-desc">Количественные доказательства</div>
+                </div>
+            </a>
+            <a href="timeline.html" class="mobile-menu-link active">
+                <i data-lucide="clock" class="icon"></i>
+                <div>
+                    <div class="mobile-menu-link-title">Временная шкала</div>
+                    <div class="mobile-menu-link-desc">Детальная хронология событий</div>
+                </div>
+            </a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <p><strong>ТОО "Администратор сети"</strong></p>
+            <p>БИН: 110940015825</p>
+            <div class="mobile-menu-contacts">
+                <a href="tel:+77772309222">📞 +7 777 230 92 22</a>
+                <a href="mailto:nikolay@supportcenter.kz">✉️ nikolay@supportcenter.kz</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Заголовок страницы -->
+        <header class="page-header">
+            <div class="container">
+                <h1 class="page-title">⏰ ДЕТАЛЬНАЯ ВРЕМЕННАЯ ШКАЛА</h1>
+                <p class="page-subtitle">
+                    Подробная хронология системных нарушений с февраля 2022 года
+                </p>
+                <div class="timeline-stats">
+                    <div class="timeline-stat">
+                        <i data-lucide="calendar" class="icon"></i>
+                        <span><strong id="total-days">1095</strong> дней беззакония</span>
+                    </div>
+                    <div class="timeline-stat">
+                        <i data-lucide="file-text" class="icon"></i>
+                        <span><strong>10</strong> ключевых событий</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Фильтры -->
+        <section class="section">
+            <div class="container">
+                <div class="timeline-filters">
+                    <button class="filter-btn active" data-filter="all">Все события</button>
+                    <button class="filter-btn critical" data-filter="critical">🔥 Критические</button>
+                    <button class="filter-btn legal" data-filter="legal">⚖️ Судебные</button>
+                    <button class="filter-btn financial" data-filter="financial">💰 Финансовые</button>
+                    <button class="filter-btn appeal" data-filter="appeal">📝 Обращения</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Детальная временная шкала -->
+        <section class="section">
+            <div class="container">
+                <div class="detailed-timeline" id="detailedTimeline">
+                    <!-- События будут загружены через JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Итоговая статистика -->
+        <section class="section">
+            <div class="container">
+                <div class="timeline-summary">
+                    <h2>📊 Итоги временной шкалы</h2>
+                    <div class="summary-stats">
+                        <div class="summary-stat">
+                            <div class="summary-number" id="days-counter">1095</div>
+                            <div class="summary-label">дней системных нарушений</div>
+                        </div>
+                        <div class="summary-stat">
+                            <div class="summary-number">8</div>
+                            <div class="summary-label">неисполненных распоряжений УГД</div>
+                        </div>
+                        <div class="summary-stat">
+                            <div class="summary-number">250+</div>
+                            <div class="summary-label">дней саботажа ДФНО</div>
+                        </div>
+                        <div class="summary-stat">
+                            <div class="summary-number">146.3+</div>
+                            <div class="summary-label">млн ₸ общий ущерб</div>
+                        </div>
+                    </div>
+                    <div class="summary-conclusion">
+                        <p><strong>Каждый день на этой временной шкале</strong> - это день нарушения конституционных прав и подрыва основ правового государства</p>
+                        <p class="conclusion-highlight">Время работает против справедливости, но истина неизбежна</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-title">Контактная информация</h3>
+                <p><strong>Истец:</strong> ТОО "Администратор сети"</p>
+                <p><strong>БИН:</strong> 110940015825</p>
+                <p><strong>Директор:</strong> Чигринов Николай</p>
+                <div class="footer-contacts">
+                    <a href="tel:+77772309222" class="footer-contact">
+                        <i data-lucide="phone" class="icon"></i>
+                        +7 777 230 92 22
+                    </a>
+                    <a href="mailto:nikolay@supportcenter.kz" class="footer-contact">
+                        <i data-lucide="mail" class="icon"></i>
+                        nikolay@supportcenter.kz
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script>
+        // Безопасная инициализация
+        (function() {
+            'use strict';
+            
+            // Предотвращаем конфликты с расширениями браузера
+            window.addEventListener('error', function(e) {
+                if (e.error && e.error.message && 
+                    (e.error.message.includes('MetaMask') || 
+                     e.error.message.includes('ethereum') ||
+                     e.error.message.includes('web3'))) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            // База данных событий временной шкалы
+            const timelineEvents = [
+                {
+                    id: 1,
+                    date: '2022-02-01',
+                    title: 'Начало незаконной блокады',
+                    category: 'critical',
+                    icon: '🚨',
+                    description: 'УГД по Илийскому району инициирует неправомерные ограничительные меры',
+                    details: {
+                        duration: '1,095+ дней',
+                        impact: 'Критический',
+                        legalBasis: 'Нарушение ст. 10, 14 ПК РК',
+                        consequences: 'Полная блокада предпринимательской деятельности'
+                    },
+                    documents: ['Уведомление о блокировке', 'Протест компании'],
+                    financialImpact: 'Начало накопления ущерба'
+                },
+                {
+                    id: 2,
+                    date: '2022-03-15',
+                    title: 'Первое обращение в ДГД',
+                    category: 'appeal',
+                    icon: '📝',
+                    description: 'Официальное обращение с требованием снять незаконные ограничения',
+                    details: {
+                        duration: '15 дней на рассмотрение',
+                        impact: 'Игнорирование',
+                        legalBasis: 'Ст. 35 Закона о рассмотрении обращений',
+                        consequences: 'Формальная отписка без решения проблемы'
+                    },
+                    documents: ['Обращение в ДГД', 'Ответ ДГД'],
+                    financialImpact: 'Продолжение накопления убытков'
+                },
+                {
+                    id: 3,
+                    date: '2022-06-20',
+                    title: 'Срыв контракта с "Қарағанды Жарық"',
+                    category: 'financial',
+                    icon: '💸',
+                    description: 'Из-за блокады сорван крупный контракт на 92.6 млн тенге',
+                    details: {
+                        duration: 'Мгновенные последствия',
+                        impact: 'Катастрофический',
+                        legalBasis: 'Ст. 922 ГК РК - возмещение вреда',
+                        consequences: 'Потеря крупнейшего контракта и репутации'
+                    },
+                    documents: ['Договор с КЖ', 'Уведомление о расторжении'],
+                    financialImpact: '92.6 млн ₸ прямых убытков'
+                },
+                {
+                    id: 4,
+                    date: '2023-02-15',
+                    title: 'Подача иска в суд',
+                    category: 'legal',
+                    icon: '⚖️',
+                    description: 'Обращение в суд с требованием признать действия УГД незаконными',
+                    details: {
+                        duration: 'Процесс длился 2.5 месяца',
+                        impact: 'Положительный',
+                        legalBasis: 'Административное судопроизводство',
+                        consequences: 'Начало судебного разбирательства'
+                    },
+                    documents: ['Исковое заявление', 'Материалы дела'],
+                    financialImpact: 'Юридические расходы 500+ тыс ₸'
+                },
+                {
+                    id: 5,
+                    date: '2023-04-28',
+                    title: 'ПОБЕДА В СУДЕ',
+                    category: 'victory',
+                    icon: '🎯',
+                    description: 'Суд признал договор недействительным, создав основание для возврата 39.4 млн ₸',
+                    details: {
+                        duration: 'Решение вступило в силу',
+                        impact: 'Критически важный',
+                        legalBasis: 'Решение СМЭС № 3514-23-00-2/894',
+                        consequences: 'Правовое основание для возврата налогов'
+                    },
+                    documents: ['Решение суда', 'Исполнительный лист'],
+                    financialImpact: 'Право на возврат 39.4 млн ₸'
+                },
+                {
+                    id: 6,
+                    date: '2023-05-15',
+                    title: 'Первое распоряжение УГД о снятии ограничений',
+                    category: 'bureaucracy',
+                    icon: '🏛️',
+                    description: 'УГД издает распоряжение о снятии ограничений, но не исполняет его',
+                    details: {
+                        duration: 'Не исполняется 584+ дня',
+                        impact: 'Саботаж',
+                        legalBasis: 'Собственное распоряжение УГД',
+                        consequences: 'Начало системного саботажа'
+                    },
+                    documents: ['Распоряжение УГД №1'],
+                    financialImpact: 'Продолжение блокады и убытков'
+                },
+                {
+                    id: 7,
+                    date: '2023-12-11',
+                    title: 'Подача ДФНО на основании решения суда',
+                    category: 'critical',
+                    icon: '🚨',
+                    description: 'Попытка подать ДФНО для возврата налогов - УГД отказывается принимать',
+                    details: {
+                        duration: 'Не принимается 250+ дней',
+                        impact: 'Критический саботаж',
+                        legalBasis: 'П.6 ст. 208 НК РК',
+                        consequences: 'Прямое нарушение налогового законодательства'
+                    },
+                    documents: ['ДФНО', 'Отказы УГД'],
+                    financialImpact: 'Блокировка возврата 39.4 млн ₸'
+                },
+                {
+                    id: 8,
+                    date: '2024-03-10',
+                    title: 'Множественные распоряжения УГД',
+                    category: 'bureaucracy',
+                    icon: '🏛️',
+                    description: 'УГД издает еще 6 распоряжений о снятии ограничений, ни одно не исполняется',
+                    details: {
+                        duration: 'Все неисполнены',
+                        impact: 'Системная халатность',
+                        legalBasis: '8 собственных распоряжений',
+                        consequences: 'Доказательство полного коллапса управления'
+                    },
+                    documents: ['Распоряжения УГД №2-8'],
+                    financialImpact: 'Накопление процентов и инфляционных потерь'
+                },
+                {
+                    id: 9,
+                    date: '2025-02-04',
+                    title: 'Грубое искажение права КГД',
+                    category: 'critical',
+                    icon: '🚨',
+                    description: 'КГД неверно применяет нормы об исковой давности к административным процедурам',
+                    details: {
+                        duration: 'Продолжающееся нарушение',
+                        impact: 'Искажение правовых основ',
+                        legalBasis: 'Неверное толкование ГК РК',
+                        consequences: 'Подрыв принципов правового государства'
+                    },
+                    documents: ['Ответ КГД с искажениями'],
+                    financialImpact: 'Блокировка всех возможностей возврата'
+                },
+                {
+                    id: 10,
+                    date: '2025-05-27',
+                    title: 'Окончательный отказ КГД',
+                    category: 'critical',
+                    icon: '🚨',
+                    description: 'КГД прекращает рассмотрение под ложным предлогом "полноты ответов"',
+                    details: {
+                        duration: 'Текущий статус',
+                        impact: 'Полное бездействие',
+                        legalBasis: 'Нарушение принципов госслужбы',
+                        consequences: 'Исчерпание административных возможностей'
+                    },
+                    documents: ['Окончательный отказ КГД'],
+                    financialImpact: 'Общий ущерб достиг 146.3+ млн ₸'
+                }
+            ];
+
+            // Категории и их стили
+            const categoryStyles = {
+                critical: 'timeline-event-critical',
+                legal: 'timeline-event-legal',
+                financial: 'timeline-event-financial',
+                appeal: 'timeline-event-appeal',
+                victory: 'timeline-event-victory',
+                bureaucracy: 'timeline-event-bureaucracy'
+            };
+
+            const categoryNames = {
+                critical: '🔥 Критическое нарушение',
+                legal: '⚖️ Судебное производство',
+                financial: '💰 Финансовые последствия',
+                appeal: '📝 Обращение в органы',
+                victory: '🎯 Судебная победа',
+                bureaucracy: '🏛️ Бюрократический саботаж'
+            };
+
+            // Функция создания карточки события
+            function createEventCard(event, index) {
+                const eventDate = new Date(event.date);
+                const formattedDate = eventDate.toLocaleDateString('ru-RU', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+
+                const isLeft = index % 2 === 0;
+                const positionClass = isLeft ? 'timeline-event-left' : 'timeline-event-right';
+
+                return `
+                    <div class="timeline-event ${categoryStyles[event.category]} ${positionClass}" data-category="${event.category}">
+                        <div class="timeline-event-marker">
+                            <span class="timeline-event-icon">${event.icon}</span>
+                        </div>
+                        <div class="timeline-event-card">
+                            <div class="timeline-event-header">
+                                <div class="timeline-event-date">${formattedDate}</div>
+                                <div class="timeline-event-category">${categoryNames[event.category]}</div>
+                            </div>
+                            <h3 class="timeline-event-title">${event.title}</h3>
+                            <p class="timeline-event-description">${event.description}</p>
+                            
+                            <div class="timeline-event-details">
+                                <div class="detail-grid">
+                                    <div class="detail-item">
+                                        <strong>Длительность:</strong> ${event.details.duration}
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Воздействие:</strong> ${event.details.impact}
+                                    </div>
+                                </div>
+                                <div class="detail-full">
+                                    <strong>Правовая основа:</strong><br>
+                                    <span class="detail-legal">${event.details.legalBasis}</span>
+                                </div>
+                            </div>
+
+                            <div class="timeline-event-consequences">
+                                <h4>📋 Последствия:</h4>
+                                <p>${event.details.consequences}</p>
+                            </div>
+
+                            <div class="timeline-event-financial">
+                                <h4>💸 Финансовое воздействие:</h4>
+                                <p>${event.financialImpact}</p>
+                            </div>
+
+                            <div class="timeline-event-documents">
+                                ${event.documents.map(doc => `<span class="document-badge">📄 ${doc}</span>`).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Функция отрисовки временной шкалы
+            function renderTimeline(events = timelineEvents) {
+                const timeline = document.getElementById('detailedTimeline');
+                if (!timeline) return;
+
+                timeline.innerHTML = events.map((event, index) => createEventCard(event, index)).join('');
+
+                // Анимация появления
+                const eventCards = timeline.querySelectorAll('.timeline-event');
+                eventCards.forEach((card, index) => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(50px)';
+                    
+                    setTimeout(() => {
+                        card.style.transition = 'all 0.6s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, index * 200);
+                });
+            }
+
+            // Функция фильтрации событий
+            function filterEvents(category) {
+                const events = document.querySelectorAll('.timeline-event');
+                
+                events.forEach(event => {
+                    if (category === 'all' || event.dataset.category === category) {
+                        event.style.display = 'block';
+                        setTimeout(() => {
+                            event.style.opacity = '1';
+                            event.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        event.style.opacity = '0';
+                        event.style.transform = 'translateY(30px)';
+                        setTimeout(() => {
+                            event.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            }
+
+            // Настройка фильтров
+            function setupFilters() {
+                const filterButtons = document.querySelectorAll('.filter-btn');
+                
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        // Убрать активный класс со всех кнопок
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        
+                        // Добавить активный класс к текущей кнопке
+                        this.classList.add('active');
+                        
+                        // Применить фильтр
+                        const filter = this.dataset.filter;
+                        filterEvents(filter);
+                    });
+                });
+            }
+
+            // Мобильное меню
+            function setupMobileMenu() {
+                const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+                const mobileMenu = document.getElementById('mobileMenu');
+                const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+                if (mobileMenuToggle && mobileMenu && mobileMenuClose) {
+                    mobileMenuToggle.addEventListener('click', () => {
+                        mobileMenu.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    });
+
+                    mobileMenuClose.addEventListener('click', () => {
+                        mobileMenu.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+
+                    // Закрытие по клику на overlay
+                    mobileMenu.addEventListener('click', (e) => {
+                        if (e.target === mobileMenu) {
+                            mobileMenu.classList.remove('active');
+                            document.body.style.overflow = '';
+                        }
+                    });
+                }
+            }
+
+            // Счетчик дней
+            function updateDaysCounter() {
+                const startDate = new Date('2022-02-01');
+                const currentDate = new Date();
+                const daysPassed = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24));
+                
+                const counters = document.querySelectorAll('#total-days, #days-counter');
+                counters.forEach(counter => {
+                    if (counter) {
+                        counter.textContent = daysPassed;
+                    }
+                });
+            }
+
+            // Инициализация иконок
+            function initIcons() {
+                try {
+                    if (typeof lucide !== 'undefined' && lucide.createIcons) {
+                        lucide.createIcons();
+                    }
+                } catch (error) {
+                    console.warn('Не удалось инициализировать иконки:', error.message);
+                }
+            }
+
+            // Загружаем основной скрипт
+            var script = document.createElement('script');
+            script.src = 'js/main.js';
+            script.onerror = function() {
+                console.warn('Не удалось загрузить основной скрипт');
+            };
+            document.head.appendChild(script);
+
+            // Инициализация при загрузке
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function() {
+                    initIcons();
+                    renderTimeline();
+                    setupFilters();
+                    setupMobileMenu();
+                    updateDaysCounter();
+                    
+                    // Обновляем счетчик каждую минуту
+                    setInterval(updateDaysCounter, 60000);
+                });
+            } else {
+                initIcons();
+                renderTimeline();
+                setupFilters();
+                setupMobileMenu();
+                updateDaysCounter();
+                setInterval(updateDaysCounter, 60000);
+            }
+        })();
+    </script>
+</body>
+</html>
