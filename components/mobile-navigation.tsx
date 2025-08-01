@@ -11,34 +11,51 @@ const navigationItems = [
   {
     name: "Главная",
     href: "/",
-    icon: Home,
+    icon: "home",
     description: "Хронология системных нарушений",
   },
   {
     name: "Правовой анализ",
     href: "/legal-analysis",
-    icon: Scale,
+    icon: "scale",
     description: "Юридическая экспертиза с прецедентами",
   },
   {
     name: "База документов",
     href: "/documents",
-    icon: FileText,
+    icon: "file-text",
     description: "Неопровержимые доказательства",
   },
   {
     name: "Статистика",
     href: "/statistics",
-    icon: BarChart3,
+    icon: "bar-chart-3",
     description: "Количественные доказательства",
   },
   {
     name: "Временная шкала",
     href: "/timeline",
-    icon: Clock,
+    icon: "clock",
     description: "Детальная хронология событий",
   },
 ]
+
+function getIcon(iconName: string) {
+  switch (iconName) {
+    case "home":
+      return <Home className="h-5 w-5" />
+    case "scale":
+      return <Scale className="h-5 w-5" />
+    case "file-text":
+      return <FileText className="h-5 w-5" />
+    case "bar-chart-3":
+      return <BarChart3 className="h-5 w-5" />
+    case "clock":
+      return <Clock className="h-5 w-5" />
+    default:
+      return <Home className="h-5 w-5" />
+  }
+}
 
 export function MobileNavigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -80,7 +97,6 @@ export function MobileNavigation() {
               <nav className="flex-1 overflow-y-auto">
                 <div className="p-4 space-y-2">
                   {navigationItems.map((item) => {
-                    const Icon = item.icon
                     const isActive = pathname === item.href
 
                     return (
@@ -95,7 +111,7 @@ export function MobileNavigation() {
                             : "text-gray-700 hover:bg-gray-100 hover:text-gray-900",
                         )}
                       >
-                        <Icon className="h-5 w-5" />
+                        {getIcon(item.icon)}
                         <div className="flex-1">
                           <div className="font-semibold">{item.name}</div>
                           <div className="text-xs text-gray-500 mt-1">{item.description}</div>
